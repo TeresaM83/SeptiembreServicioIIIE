@@ -21,22 +21,22 @@ public class ProductoServiceImpl implements ProductoService {
 
 	@Override
 	public void actualizar(Producto p) {
-		repository.actualizar(p);
+		repository.saveAndFlush(p);
 	}
 
 	@Override
 	public void eliminar(Integer codigo) {
-		repository.eliminar(codigo);
+		repository.deleteById(codigo);
 	}
 
 	@Override
 	public Producto buscar(Integer codigo) {
-		return repository.buscar(codigo);
+		return repository.findById(codigo).orElse(null);
 	}
 
 	@Override
 	public List<Producto> listar() {
-		return repository.listar();
+		return repository.findAll();
 	}
 
 }
