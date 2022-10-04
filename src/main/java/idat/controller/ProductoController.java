@@ -70,7 +70,7 @@ public class ProductoController {
 	public ResponseEntity<?> actualizar(@RequestBody Producto p, @PathVariable Integer codigo) {
 		producto= service.buscar(codigo);
 		if (producto!=null) {
-			p.setId(codigo);
+			p.setIdproducto(codigo);
 			service.actualizar(p);
 			return new ResponseEntity<>(p,HttpStatus.OK);
 		}else {
