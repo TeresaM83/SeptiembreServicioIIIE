@@ -22,7 +22,7 @@ public class ProductoController {
 	@Autowired
 	private ProductoService service;
 
-	@RequestMapping(method = RequestMethod.GET)
+	@RequestMapping(method = RequestMethod.GET, path = "/")
 	//@GetMapping("")
 	public ResponseEntity<List<Producto>> listar() {
 		List<Producto> listaProductos=service.listar();		
@@ -58,7 +58,7 @@ public class ProductoController {
 		}
 	}
 	
-	@RequestMapping(method = RequestMethod.POST)
+	@RequestMapping(method = RequestMethod.POST, path = "/")
 	//@PostMapping("")
 	public ResponseEntity<Producto> create(@RequestBody Producto p) {
 		service.save(p);	
