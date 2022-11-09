@@ -26,7 +26,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class ConfigSecurity extends WebSecurityConfigurerAdapter{
-
+	//http://localhost:8090/oauth/token
 	@Autowired
 	private UserDetailService service;
 	
