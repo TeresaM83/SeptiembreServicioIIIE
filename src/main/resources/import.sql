@@ -1,0 +1,1 @@
+INSERT into usuarios(usuario,contrasenia,rol) values('teresa','$2a$12$33CzmkxRV/CpKnHGBJA8UelttGwFgV9xOpRDyLv.vgaOMrUgBzyQK','ROLE_PROFESOR');
